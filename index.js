@@ -30,6 +30,7 @@ client.on('messageCreate', async (message) => {
   const args = message.content.replace(process.env.BOT_PREFIX, '').trim().split(/ /g)
   const command = args.shift().toLowerCase()
   if (command === 'say') {
+    if (!message.member.permissions.has('ADMINISTRATOR')) return message.channel.send('Você não é digno de usar este comando.')
     if (!args[0]) return message.channel.send('Você precisa por mencionar um canal ou por o ID.')
     const channel = message.guild.channels.cache.get(args[0]?.replace(/[<#>]/g, ''))
     if (!channel) return message.channel.send('Você precisa especificar um canal válido.')
@@ -40,6 +41,7 @@ client.on('messageCreate', async (message) => {
   }
 
   if (command === 'image') {
+    if (!message.member.permissions.has('ADMINISTRATOR')) return message.channel.send('Você não é digno de usar este comando.')
     if (!args[0]) return message.channel.send('Você precisa por mencionar um canal ou por o ID.')
     const channel = message.guild.channels.cache.get(args[0]?.replace(/[<#>]/g, ''))
     if (!channel) return message.channel.send('Você precisa especificar um canal válido.')
