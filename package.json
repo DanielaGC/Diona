@@ -1,0 +1,15 @@
+{
+  "name": "diona",
+  "version": "0.0.1",
+  "author": "DanielaGC_",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0"
+  }
+}
