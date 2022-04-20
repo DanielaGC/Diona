@@ -14,7 +14,7 @@ client.once('ready', () => {
   ]
   setInterval(() => {
     const random_words = words[Math.floor(Math.random() * words.length)]
-    channel.createMessage(random_words)
+    channel.send(random_words)
   }, 36000000)
 
 })
