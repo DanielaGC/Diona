@@ -11,8 +11,15 @@ export default {
       'Eu gosto, não, AMO comer peixe! O peixe que o papai cozinha é o melhor, um purrfeito prato principal! ...Mas comer peixe como tira-gosto, é uma blasfêmia absoluta!'
     ]
     setInterval(() => {
-      const random_words = words[Math.floor(Math.random() * words.length)]
-      channel.send(random_words)
+      const random_quotes = words[Math.floor(Math.random() * words.length)]
+      const lastMessage = channel.guild.channels.cache.get(channel.id).messages.cache.get(channel.lastMessageId)
+      const date = Date.now() + (2 * 3600000)
+
+      if ((lastMesage.author.bot) && (lastMessage && lastMessage?.createdTimestamp > date)) {
+        return
+      }
+
+      channel.send(random_quotes)
     }, 4 * 3600000)
   }
 }
