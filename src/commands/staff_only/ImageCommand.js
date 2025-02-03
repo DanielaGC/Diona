@@ -4,7 +4,7 @@ export default class ImageCommand extends Command {
   constructor() {
     super({
       name: 'image',
-      user_permission: ['ADMINISTRATOR']
+      user_permission: ['Administrator']
     })
   }
 
