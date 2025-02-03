@@ -4,7 +4,7 @@ export default class SayCommand extends Command {
   constructor() {
     super({
       name: 'say',
-      user_permission: ['ADMINISTRATOR']
+      user_permission: ['Administrator']
     })
   }
 
