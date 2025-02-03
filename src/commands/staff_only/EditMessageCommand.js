@@ -4,7 +4,7 @@ export default class EditMessageCommand extends Command {
   constructor() {
     super({
       name: 'editmsg',
-      user_permission: ['ADMINISTRATOR']
+      user_permission: ['Administrator']
     })
   }
 
