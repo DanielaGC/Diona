@@ -15,7 +15,7 @@ export default {
       const lastMessage = channel.guild.channels.cache.get(channel.id).messages.cache.get(channel.lastMessageId)
       const date = Date.now() + (2 * 3600000)
 
-      if ((lastMesage.author.bot) && (lastMessage && lastMessage?.createdTimestamp > date)) {
+      if ((lastMesage.author.bot) && (lastMessage && date > lastMessage?.createdTimestamp)) {
         return
       }
 
