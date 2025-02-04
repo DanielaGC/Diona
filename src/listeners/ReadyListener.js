@@ -12,10 +12,10 @@ export default {
     ]
     setInterval(() => {
       const random_quotes = words[Math.floor(Math.random() * words.length)]
-      const lastMessage = channel.guild.channels.cache.get(channel.id).messages.cache.get(channel.lastMessageId)
-      const date = Date.now() + (2 * 3600000)
+      const last_message = channel.guild.channels.cache.get(channel.id).messages.cache.get(channel?.lastMessageId)
+      const date = last_message?.createdTimestamp + (2 * 3600000)
 
-      if ((lastMesage.author.bot) && (lastMessage && date > lastMessage?.createdTimestamp)) {
+      if ((last_message?.author.bot) && (date < Date.now())) {
         return
       }
 
