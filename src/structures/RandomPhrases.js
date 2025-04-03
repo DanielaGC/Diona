@@ -1,0 +1,7 @@
+const phrases = [
+
+]
+
+export {
+  phrases
+}
